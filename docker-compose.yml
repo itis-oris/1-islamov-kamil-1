@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:latest
+    restart: unless-stopped
+    container_name: compmaster
+    environment:
+      POSTGRES_DB: computermaster
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 12345
+    ports:
+      - "5436:5432"
